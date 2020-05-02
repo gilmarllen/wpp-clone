@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Faker from 'faker/locale/pt_BR';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -15,43 +15,43 @@ const chatsIni = {
       id: 1,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     },
     {
       id: 2,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     },
     {
       id: 3,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     },
     {
       id: 4,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     },
     {
       id: 5,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     },
     {
       id: 6,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     },
     {
       id: 7,
       name: Faker.name.firstName(),
       image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1)
+      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
     }
   ],
   current: 1
@@ -68,7 +68,7 @@ function App({ classes }) {
       ...chats,
       list: chats.list.map((it) => (it.id === chats.current ? {
         ...it,
-        messages: it.messages.concat(m)
+        messages: it.messages.concat({ m, id: it.messages.length })
       } : it))
     })
   };
@@ -90,12 +90,12 @@ function App({ classes }) {
   );
 }
 
-App.propTypes = {
-  classes: PropTypes.shape({
-    root: PropTypes.string.isRequired,
-    background: PropTypes.string.isRequired,
-    card: PropTypes.string.isRequired
-  }).isRequired
-};
+// App.propTypes = {
+//   classes: PropTypes.shape({
+//     root: PropTypes.string.isRequired,
+//     background: PropTypes.string.isRequired,
+//     card: PropTypes.string.isRequired
+//   }).isRequired
+// };
 
 export default withStyles(appStyles)(App);

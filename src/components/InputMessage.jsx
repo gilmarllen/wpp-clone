@@ -54,8 +54,8 @@ export default function CustomizedInputBase({ sendMessage }) {
         value={content}
         onKeyDown={keyPressHandler}
       />
-      <IconButton className={classes.iconButton} aria-label="send">
-        <SendIcon onClick={sendMessageHandler} />
+      <IconButton className={classes.iconButton} aria-label="send" onClick={sendMessageHandler}>
+        <SendIcon />
       </IconButton>
     </Paper>
   );

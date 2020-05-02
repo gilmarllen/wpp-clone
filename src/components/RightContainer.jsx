@@ -20,11 +20,15 @@ const RightContainer = ({ classes, chat, sendMessage }) => (
       title={chat.name}
       classes={{ root: classes.cardHeader }}
     />
-    <CardContent className={[classes.rightContainer, classes.content]}>
-      {chat.messages.map((m) => (
-        <Paper className={classes.message} elevation={0}>
-          <Typography className={classes.information} variant="subheader">
-            {m}
+    <CardContent className={`${classes.rightContainer} ${classes.content}`}>
+      {chat.messages.map((message) => (
+        <Paper
+          className={classes.message}
+          elevation={0}
+          key={message.id}
+        >
+          <Typography className={classes.information} variant="body2">
+            {message.m}
           </Typography>
         </Paper>
       ))}

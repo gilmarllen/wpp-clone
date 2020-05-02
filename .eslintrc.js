@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     "comma-dangle": ["error", "never"],
     "react/prop-types": 0,
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "no-console": "off",
   },
 };
