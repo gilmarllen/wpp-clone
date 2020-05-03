@@ -7,8 +7,8 @@ import {
 import InputMessage from './InputMessage';
 
 const RightContainer = ({ classes, chat, sendMessage }) => (
-  <Grid item md={9} className={classes.chatArea}>
-    <Card>
+  <Grid item md={9} className={classes.rightGrid}>
+    <Card className={classes.rightCard}>
       <CardHeader
         avatar={
           <Avatar alt={chat.name} src={chat.image} aria-label="Recipe" className={classes.avatar} />
@@ -21,14 +21,16 @@ const RightContainer = ({ classes, chat, sendMessage }) => (
         title={chat.name}
         classes={{ root: classes.cardHeader }}
       />
-      <CardContent className={`${classes.rightContainer}`}>
+      <CardContent className={classes.chatArea}>
         <List>
           {chat.messages.map((message) => (
-            <ListItem>
+            <ListItem
+              key={message.id}
+              className={classes['message-wrapper']}
+            >
               <Paper
                 className={classes.message}
                 elevation={0}
-                key={message.id}
               >
                 <Typography className={classes.information} variant="body2">
                   {message.m}

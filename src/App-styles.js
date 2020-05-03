@@ -31,18 +31,22 @@ export default () => ({
     background: '#009788',
     'z-index': -1
   },
-  rightContainer: {
-    background:
-      'url(https://hdwallsource.com/img/2014/8/my-neighbor-totoro-wallpaper-27981-28703-hd-wallpapers.jpg) center center'
-    // flex: 1
+  rightGrid: {
+    height: '100%'
+  },
+  rightCard: {
+    display: 'flex',
+    height: '100%',
+    flex: '1',
+    'flex-direction': 'column'
   },
   chatArea: {
-    height: '100%',
-    flex: '1'
-  },
-  heightAdjust: {
+    background:
+      'url(https://hdwallsource.com/img/2014/8/my-neighbor-totoro-wallpaper-27981-28703-hd-wallpapers.jpg) center center',
+    'overflow-y': 'scroll',
+    'flex-direction': 'column-reverse',
     display: 'flex',
-    'flex-direction': 'column'
+    flex: '1'
   },
   paper: {
     background: '#9de1fe',
@@ -55,9 +59,12 @@ export default () => ({
   message: {
     background: 'white',
     padding: 10,
-    margin: '5px 5px 10px 15px',
     'max-width': '50%',
     width: 'fit-content'
+  },
+  'message-wrapper': {
+    'padding-top': '2px',
+    'padding-bottom': '2px'
   },
   inputMessage: {
     height: '25px'
