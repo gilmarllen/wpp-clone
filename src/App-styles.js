@@ -1,8 +1,7 @@
 export default () => ({
   root: {
     padding: '50px 100px',
-    zIndex: 999,
-    position: 'absolute'
+    zIndex: 999
   },
   card: {
     display: 'flex',
@@ -29,16 +28,21 @@ export default () => ({
     height: 200,
     width: '100%',
     top: 0,
-    background: '#009788'
+    background: '#009788',
+    'z-index': -1
   },
   rightContainer: {
     background:
-      'url(https://hdwallsource.com/img/2014/8/my-neighbor-totoro-wallpaper-27981-28703-hd-wallpapers.jpg) center center',
-    flex: 1
+      'url(https://hdwallsource.com/img/2014/8/my-neighbor-totoro-wallpaper-27981-28703-hd-wallpapers.jpg) center center'
+    // flex: 1
+  },
+  chatArea: {
+    height: '100%',
+    flex: '1'
   },
   heightAdjust: {
     display: 'flex',
-    flexDirection: 'column'
+    'flex-direction': 'column'
   },
   paper: {
     background: '#9de1fe',

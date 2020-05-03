@@ -1,42 +1,47 @@
 import React from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {
-  Grid, CardHeader, CardContent, Avatar, IconButton, Paper, Typography
+  Grid, Card, CardHeader, CardContent, Avatar, IconButton, Paper, Typography, CardActions, List, ListItem
 } from '@material-ui/core';
 
 import InputMessage from './InputMessage';
 
 const RightContainer = ({ classes, chat, sendMessage }) => (
-  <Grid className={classes.heightAdjust} item md={9}>
-    <CardHeader
-      avatar={
-        <Avatar alt={chat.name} src={chat.image} aria-label="Recipe" className={classes.avatar} />
+  <Grid item md={9} className={classes.chatArea}>
+    <Card>
+      <CardHeader
+        avatar={
+          <Avatar alt={chat.name} src={chat.image} aria-label="Recipe" className={classes.avatar} />
             }
-      action={(
-        <IconButton>
-          <MoreVertIcon />
-        </IconButton>
+        action={(
+          <IconButton>
+            <MoreVertIcon />
+          </IconButton>
               )}
-      title={chat.name}
-      classes={{ root: classes.cardHeader }}
-    />
-    <CardContent className={`${classes.rightContainer} ${classes.content}`}>
-      {chat.messages.map((message) => (
-        <Paper
-          className={classes.message}
-          elevation={0}
-          key={message.id}
-        >
-          <Typography className={classes.information} variant="body2">
-            {message.m}
-          </Typography>
-        </Paper>
-      ))}
-    </CardContent>
-    <CardHeader
-      subheader={<InputMessage sendMessage={sendMessage} />}
-      classes={{ root: classes.cardHeader }}
-    />
+        title={chat.name}
+        classes={{ root: classes.cardHeader }}
+      />
+      <CardContent className={`${classes.rightContainer}`}>
+        <List>
+          {chat.messages.map((message) => (
+            <ListItem>
+              <Paper
+                className={classes.message}
+                elevation={0}
+                key={message.id}
+              >
+                <Typography className={classes.information} variant="body2">
+                  {message.m}
+                </Typography>
+              </Paper>
+            </ListItem>
+          ))}
+        </List>
+      </CardContent>
+      <CardActions>
+        <InputMessage sendMessage={sendMessage} />
+      </CardActions>
+    </Card>
   </Grid>
 );
 
