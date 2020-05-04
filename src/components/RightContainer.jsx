@@ -1,7 +1,8 @@
 import React from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {
-  Grid, Card, CardHeader, CardContent, Avatar, IconButton, Paper, Typography, CardActions, List, ListItem
+  Grid, Card, CardHeader, CardContent, Avatar, IconButton,
+  Paper, Typography, CardActions, List, ListItem
 } from '@material-ui/core';
 
 import InputMessage from './InputMessage';

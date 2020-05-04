@@ -60,3 +60,5 @@ export default function CustomizedInputBase({ sendMessage }) {
     </Paper>
   );
 }
+
+// TODO Scroll chat to bottom when send message

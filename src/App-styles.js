@@ -1,11 +1,20 @@
 export default () => ({
   root: {
-    padding: '50px 100px',
-    zIndex: 999
+    height: '100vh',
+    zIndex: 999,
+    '@media (min-height: 970px)': {
+      padding: '20px 0'
+    }
   },
   card: {
     display: 'flex',
-    height: 'calc(100vh - 100px)'
+    height: '100%',
+    'max-width': '1400px',
+    width: '100%',
+    'max-height': '970px',
+    '@media (min-height: 970px)': {
+      'max-height': 'none'
+    }
   },
   rightBorder: {
     borderRight: 'solid #d0D0D0 1px',
@@ -43,7 +52,7 @@ export default () => ({
   chatArea: {
     background:
       'url(https://hdwallsource.com/img/2014/8/my-neighbor-totoro-wallpaper-27981-28703-hd-wallpapers.jpg) center center',
-    'overflow-y': 'scroll',
+    'overflow-y': 'auto',
     'flex-direction': 'column-reverse',
     display: 'flex',
     flex: '1'
@@ -72,8 +81,22 @@ export default () => ({
   information: {
     color: '#444'
   },
+  leftGrid: {
+    height: '100%',
+    display: 'flex',
+    'flex-direction': 'column'
+  },
   leftList: {
-    'padding-top': '0px'
+    'padding-top': '0px',
+    'flex-grow': '1',
+    'overflow-y': 'auto',
+    'min-height': '100%'
+  },
+  'leftList-wrapper': {
+    'flex-grow': '1',
+    display: 'flex',
+    'flex-direction': 'column',
+    'min-height': '0'
   },
   'leftList-intro': {
     'text-overflow': 'ellipsis',

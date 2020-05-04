@@ -41,7 +41,7 @@ export default function CustomizedInputBase({ sendMessage }) {
   };
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root} style={{ flexShrink: 0 }}>
       <IconButton className={classes.iconButton} aria-label="attach">
         <AttachFileIcon />
       </IconButton>

@@ -6,14 +6,15 @@ import NotificationsOffIcon from '@material-ui/icons/NotificationsOff';
 
 import {
   Paper, Typography, Grid, CardHeader, Avatar,
-  IconButton, List, ListItem, ListItemText
+  IconButton, List, ListItem, ListItemText, Box
 } from '@material-ui/core';
 
 import InputSearch from './InputSearch';
 
 const LeftContainer = ({ classes, chats, changeCurrent }) => (
-  <Grid item md={3}>
+  <Grid item sm={3} className={classes.leftGrid}>
     <CardHeader
+      style={{ flexShrink: 0 }}
       className={classes.rightBorder}
       avatar={(
         <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -31,14 +32,14 @@ const LeftContainer = ({ classes, chats, changeCurrent }) => (
         </>
             )}
     />
-    <Paper className={classes.paper} elevation={0}>
+    <Paper className={classes.paper} elevation={0} style={{ flexShrink: 0 }}>
       <Grid container spacing={0}>
-        <Grid item md={2}>
+        <Grid item sm={2}>
           <IconButton>
             <NotificationsOffIcon />
           </IconButton>
         </Grid>
-        <Grid item md={10}>
+        <Grid item sm={10}>
           <Typography className={classes.information} variant="subtitle2">
             React (also known as React.js or ReactJS) is a JavaScript
             library[3] for building user interfaces.
@@ -47,27 +48,25 @@ const LeftContainer = ({ classes, chats, changeCurrent }) => (
       </Grid>
     </Paper>
     <InputSearch />
-    <List className={classes.leftList}>
-      {chats.list.map((item) => (
-        <ListItem
-          selected={item.id === chats.current}
-          onClick={() => changeCurrent(item.id)}
-          button
-          key={item.id}
-        >
-          <Grid item md={1}>
-            <Avatar alt={item.name} src={item.image} />
-          </Grid>
-          <Grid item md={11}>
+    <Box className={classes['leftList-wrapper']}>
+      <List className={classes.leftList}>
+        {chats.list.map((item) => (
+          <ListItem
+            selected={item.id === chats.current}
+            onClick={() => changeCurrent(item.id)}
+            button
+            key={item.id}
+          >
+            <Avatar alt={item.name} src={item.image} style={{ marginRight: '10px' }} />
             <ListItemText
               classes={{ secondary: classes['leftList-intro'] }}
               primary={item.name}
               secondary={item.messages[item.messages.length - 1].m}
             />
-          </Grid>
-        </ListItem>
-      ))}
-    </List>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
   </Grid>
 );
 

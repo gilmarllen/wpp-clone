@@ -9,52 +9,16 @@ import appStyles from './App-styles';
 import LeftContainer from './components/LeftContainer';
 import RightContainer from './components/RightContainer';
 
+const generateInitialList = (qtd) => [...Array(qtd).keys()].map((idx) => ({
+  id: idx,
+  name: Faker.name.firstName(),
+  image: Faker.image.avatar(),
+  messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
+}));
+
 const chatsIni = {
-  list: [
-    {
-      id: 1,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    },
-    {
-      id: 2,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    },
-    {
-      id: 3,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    },
-    {
-      id: 4,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    },
-    {
-      id: 5,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    },
-    {
-      id: 6,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    },
-    {
-      id: 7,
-      name: Faker.name.firstName(),
-      image: Faker.image.avatar(),
-      messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
-    }
-  ],
-  current: 1
+  list: generateInitialList(15),
+  current: 0
 };
 
 function App({ classes }) {
@@ -76,15 +40,13 @@ function App({ classes }) {
   return (
     <div>
       <div className={classes.background} />
-      <Grid container className={classes.root}>
-        <Grid item xs={12}>
-          <Card className={classes.card}>
-            <Grid container>
-              <LeftContainer classes={classes} {...leftProps} />
-              <RightContainer classes={classes} {...rightProps} />
-            </Grid>
-          </Card>
-        </Grid>
+      <Grid container className={classes.root} justify="center" alignItems="center">
+        <Card className={classes.card}>
+          <Grid container>
+            <LeftContainer classes={classes} {...leftProps} />
+            <RightContainer classes={classes} {...rightProps} />
+          </Grid>
+        </Card>
       </Grid>
     </div>
   );
