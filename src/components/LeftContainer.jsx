@@ -12,10 +12,10 @@ import {
 import InputSearch from './InputSearch';
 
 const LeftContainer = ({ classes, chats, changeCurrent }) => (
-  <Grid item sm={3} className={classes.leftGrid}>
+  <Grid item className={classes.leftGrid} style={{ width: '30%' }}>
     <CardHeader
       style={{ flexShrink: 0 }}
-      className={classes.rightBorder}
+      className={`${classes.rightBorder} ${classes.cardHeader}`}
       avatar={(
         <Avatar aria-label="Recipe" className={classes.avatar}>
           G
@@ -57,7 +57,7 @@ const LeftContainer = ({ classes, chats, changeCurrent }) => (
             button
             key={item.id}
           >
-            <Avatar alt={item.name} src={item.image} style={{ marginRight: '10px' }} />
+            <Avatar alt={item.name} src={item.image} style={{ marginRight: '10px', width: '50px', height: '50px' }} />
             <ListItemText
               classes={{ secondary: classes['leftList-intro'] }}
               primary={item.name}

@@ -1,5 +1,6 @@
 import React from 'react';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import SearchIcon from '@material-ui/icons/Search';
 import {
   Grid, Card, CardHeader, CardContent, Avatar, IconButton,
   Paper, Typography, CardActions, List, ListItem
@@ -8,19 +9,24 @@ import {
 import InputMessage from './InputMessage';
 
 const RightContainer = ({ classes, chat, sendMessage }) => (
-  <Grid item md={9} className={classes.rightGrid}>
+  <Grid item className={classes.rightGrid} style={{ width: '70%' }}>
     <Card className={classes.rightCard}>
       <CardHeader
+        className={classes.cardHeader}
         avatar={
           <Avatar alt={chat.name} src={chat.image} aria-label="Recipe" className={classes.avatar} />
             }
         action={(
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
+          <>
+            <IconButton>
+              <SearchIcon />
+            </IconButton>
+            <IconButton>
+              <MoreVertIcon />
+            </IconButton>
+          </>
               )}
         title={chat.name}
-        classes={{ root: classes.cardHeader }}
       />
       <CardContent className={classes.chatArea}>
         <List>

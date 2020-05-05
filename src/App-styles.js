@@ -6,6 +6,10 @@ export default () => ({
       padding: '20px 0'
     }
   },
+  cardHeader: {
+    background: '#ededed',
+    padding: '9px 16px'
+  },
   card: {
     display: 'flex',
     height: '100%',
@@ -18,7 +22,7 @@ export default () => ({
   },
   rightBorder: {
     borderRight: 'solid #d0D0D0 1px',
-    background: '#dfdfdf'
+    background: '#ededed'
   },
   content: {
     marginTop: 0,
@@ -51,19 +55,18 @@ export default () => ({
   },
   chatArea: {
     background:
-      'url(https://hdwallsource.com/img/2014/8/my-neighbor-totoro-wallpaper-27981-28703-hd-wallpapers.jpg) center center',
+      'url(bg-chat.png)',
     'overflow-y': 'auto',
     'flex-direction': 'column-reverse',
     display: 'flex',
-    flex: '1'
+    flex: '1',
+    height: '100%',
+    width: '100%'
+    // opacity: '0.06'
   },
   paper: {
     background: '#9de1fe',
     padding: 20
-  },
-  cardHeader: {
-    background: '#dfdfdf'
-    // padding: "15px"
   },
   message: {
     background: 'white',

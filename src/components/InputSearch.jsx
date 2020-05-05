@@ -2,10 +2,11 @@ import React, { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
 
 import IconButton from '@material-ui/core/IconButton';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
-import SendIcon from '@material-ui/icons/Send';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,22 +42,26 @@ export default function CustomizedInputBase({ sendMessage }) {
   };
 
   return (
-    <Paper className={classes.root} style={{ flexShrink: 0 }}>
-      <IconButton className={classes.iconButton} aria-label="attach">
-        <AttachFileIcon />
-      </IconButton>
+    <Paper className={classes.root} style={{ flexShrink: 0, background: '#f7f7f7', padding: '6px 0' }}>
       <InputBase
+        startAdornment={(
+          <InputAdornment position="start">
+            <IconButton disabled>
+              <SearchIcon fontSize="small" />
+            </IconButton>
+          </InputAdornment>
+          )}
+        style={{
+          margin: '0 10px', borderRadius: '30px', background: 'white', height: '38px', fontSize: '15px', paddingRight: '15px'
+        }}
         inputRef={inputRef}
         className={classes.input}
-        placeholder="Digite aqui"
-        inputProps={{ 'aria-label': 'digite aqui' }}
+        placeholder="Search or start new chat"
+        inputProps={{ 'aria-label': 'search or start new chat' }}
         onChange={(e) => setContent(e.target.value)}
         value={content}
         onKeyDown={keyPressHandler}
       />
-      <IconButton className={classes.iconButton} aria-label="send" onClick={sendMessageHandler}>
-        <SendIcon />
-      </IconButton>
     </Paper>
   );
 }
