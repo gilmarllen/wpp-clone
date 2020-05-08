@@ -26,5 +26,6 @@ module.exports = {
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": "off",
     "no-console": "off",
+    "semi": ["error", "never"]
   },
 };

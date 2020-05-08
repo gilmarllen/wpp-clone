@@ -1,3 +1,5 @@
+// TODO identify reused classes
+
 export default () => ({
   root: {
     height: '100vh',
@@ -8,7 +10,10 @@ export default () => ({
   },
   cardHeader: {
     background: '#ededed',
-    padding: '9px 16px'
+    padding: '6px 16px'
+  },
+  'cardHeader-action': {
+    marginTop: '0'
   },
   card: {
     display: 'flex',
@@ -106,4 +111,4 @@ export default () => ({
     overflow: 'hidden',
     'white-space': 'nowrap'
   }
-});
+})

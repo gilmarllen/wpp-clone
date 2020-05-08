@@ -1,27 +1,38 @@
-import React from 'react';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import SearchIcon from '@material-ui/icons/Search';
+import React from 'react'
 import {
   Grid, Card, CardHeader, CardContent, Avatar, IconButton,
   Paper, Typography, CardActions, List, ListItem
-} from '@material-ui/core';
+} from '@material-ui/core'
 
-import InputMessage from './InputMessage';
+import MoreVertIcon from '@material-ui/icons/MoreVert'
+import SearchIcon from '@material-ui/icons/Search'
+import AttachFileIcon from '@material-ui/icons/AttachFile'
+
+import InputMessage from './InputMessage'
 
 const RightContainer = ({ classes, chat, sendMessage }) => (
   <Grid item className={classes.rightGrid} style={{ width: '70%' }}>
     <Card className={classes.rightCard}>
       <CardHeader
         className={classes.cardHeader}
+        classes={{ action: classes['cardHeader-action'] }}
         avatar={
           <Avatar alt={chat.name} src={chat.image} aria-label="Recipe" className={classes.avatar} />
             }
         action={(
           <>
-            <IconButton>
+            <IconButton style={{ backgroundColor: 'transparent', color: '#919191' }}>
               <SearchIcon />
             </IconButton>
-            <IconButton>
+            <IconButton
+              aria-label="attach"
+              style={{
+                marginLeft: '6px', transform: 'rotate(50deg)', backgroundColor: 'transparent', color: '#919191'
+              }}
+            >
+              <AttachFileIcon />
+            </IconButton>
+            <IconButton style={{ marginLeft: '6px', backgroundColor: 'transparent', color: '#919191' }}>
               <MoreVertIcon />
             </IconButton>
           </>
@@ -52,6 +63,6 @@ const RightContainer = ({ classes, chat, sendMessage }) => (
       </CardActions>
     </Card>
   </Grid>
-);
+)
 
-export default RightContainer;
+export default RightContainer

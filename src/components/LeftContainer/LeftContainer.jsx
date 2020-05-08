@@ -1,37 +1,17 @@
-import React from 'react';
-
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Message from '@material-ui/icons/Message';
-import NotificationsOffIcon from '@material-ui/icons/NotificationsOff';
+import React from 'react'
 
 import {
-  Paper, Typography, Grid, CardHeader, Avatar,
-  IconButton, List, ListItem, ListItemText, Box
-} from '@material-ui/core';
+  Paper, Typography, Grid, Avatar, IconButton, List, ListItem, ListItemText, Box
+} from '@material-ui/core'
 
-import InputSearch from './InputSearch';
+import NotificationsOffIcon from '@material-ui/icons/NotificationsOff'
+
+import InputSearch from './InputSearch/InputSearch'
+import LeftHeader from './LeftHeader/LeftHeader'
 
 const LeftContainer = ({ classes, chats, changeCurrent }) => (
   <Grid item className={classes.leftGrid} style={{ width: '30%' }}>
-    <CardHeader
-      style={{ flexShrink: 0 }}
-      className={`${classes.rightBorder} ${classes.cardHeader}`}
-      avatar={(
-        <Avatar aria-label="Recipe" className={classes.avatar}>
-          G
-        </Avatar>
-              )}
-      action={(
-        <>
-          <IconButton>
-            <Message />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
-        </>
-            )}
-    />
+    <LeftHeader />
     <Paper className={classes.paper} elevation={0} style={{ flexShrink: 0 }}>
       <Grid container spacing={0}>
         <Grid item sm={2}>
@@ -68,6 +48,6 @@ const LeftContainer = ({ classes, chats, changeCurrent }) => (
       </List>
     </Box>
   </Grid>
-);
+)
 
-export default LeftContainer;
+export default LeftContainer
