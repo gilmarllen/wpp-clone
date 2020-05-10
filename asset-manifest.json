@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wpp-clone/static/css/main.a797a33b.chunk.css",
+    "main.js": "/wpp-clone/static/js/main.71502562.chunk.js",
+    "main.js.map": "/wpp-clone/static/js/main.71502562.chunk.js.map",
+    "runtime-main.js": "/wpp-clone/static/js/runtime-main.802536fb.js",
+    "runtime-main.js.map": "/wpp-clone/static/js/runtime-main.802536fb.js.map",
+    "static/js/2.a8858827.chunk.js": "/wpp-clone/static/js/2.a8858827.chunk.js",
+    "static/js/2.a8858827.chunk.js.map": "/wpp-clone/static/js/2.a8858827.chunk.js.map",
+    "index.html": "/wpp-clone/index.html",
+    "precache-manifest.3c3f6766104114f0d141f6cf5cb166c5.js": "/wpp-clone/precache-manifest.3c3f6766104114f0d141f6cf5cb166c5.js",
+    "service-worker.js": "/wpp-clone/service-worker.js",
+    "static/css/main.a797a33b.chunk.css.map": "/wpp-clone/static/css/main.a797a33b.chunk.css.map",
+    "static/js/2.a8858827.chunk.js.LICENSE.txt": "/wpp-clone/static/js/2.a8858827.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.802536fb.js",
+    "static/js/2.a8858827.chunk.js",
+    "static/css/main.a797a33b.chunk.css",
+    "static/js/main.71502562.chunk.js"
+  ]
+}
