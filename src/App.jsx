@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
+
 // import PropTypes from 'prop-types';
 import Faker from 'faker/locale/pt_BR'
+import {
+  BrowserView,
+  MobileView
+} from 'react-device-detect'
 
 import { withStyles } from '@material-ui/core/styles'
 import { Card, Grid } from '@material-ui/core'
@@ -17,7 +22,7 @@ const generateInitialList = (qtd) => [...Array(qtd).keys()].map((idx) => ({
 }))
 
 const chatsIni = {
-  list: generateInitialList(15),
+  list: generateInitialList(70),
   current: 0
 }
 
@@ -38,17 +43,27 @@ function App({ classes }) {
   }
 
   return (
-    <div>
-      <div className={classes.background} />
-      <Grid container className={classes.root} justify="center" alignItems="center">
-        <Card className={classes.card}>
-          <Grid container>
-            <LeftContainer classes={classes} {...leftProps} />
-            <RightContainer classes={classes} {...rightProps} />
-          </Grid>
-        </Card>
-      </Grid>
-    </div>
+    <>
+      <BrowserView>
+        <div className={classes.background} />
+        <Grid container className={classes.root} justify="center" alignItems="center">
+          <Card className={classes.card}>
+            <Grid container>
+              <LeftContainer classes={classes} {...leftProps} />
+              <RightContainer classes={classes} {...rightProps} />
+            </Grid>
+          </Card>
+        </Grid>
+      </BrowserView>
+      <MobileView style={{
+        position: 'absolute', top: '50vh', textAlign: 'center', width: '100%'
+      }}
+      >
+        This content is unavailable on mobile. Please check on a Desktop Web Browser
+        {' '}
+        <span role="img" aria-label="computer">🖥️</span>
+      </MobileView>
+    </>
   )
 }
 

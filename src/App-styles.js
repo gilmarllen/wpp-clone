@@ -16,6 +16,7 @@ export default () => ({
     marginTop: '0'
   },
   card: {
+    borderRadius: 'unset',
     display: 'flex',
     height: '100%',
     'max-width': '1400px',
@@ -93,22 +94,5 @@ export default () => ({
     height: '100%',
     display: 'flex',
     'flex-direction': 'column'
-  },
-  leftList: {
-    'padding-top': '0px',
-    'flex-grow': '1',
-    'overflow-y': 'auto',
-    'min-height': '100%'
-  },
-  'leftList-wrapper': {
-    'flex-grow': '1',
-    display: 'flex',
-    'flex-direction': 'column',
-    'min-height': '0'
-  },
-  'leftList-intro': {
-    'text-overflow': 'ellipsis',
-    overflow: 'hidden',
-    'white-space': 'nowrap'
   }
 })

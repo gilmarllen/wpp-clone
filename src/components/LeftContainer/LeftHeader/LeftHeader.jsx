@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { CardHeader, Avatar, IconButton } from '@material-ui/core'
+import { CardHeader, Avatar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import MoreVertIcon from '@material-ui/icons/MoreVert'
-import Message from '@material-ui/icons/Message'
+
+import LeftHeaderIcons from './LeftHeader-Icons'
 
 const useStyles = makeStyles({
   rightBorder: {
@@ -35,16 +35,7 @@ const LeftHeader = () => {
       avatar={(
         <Avatar aria-label="Recipe">G</Avatar>
       )}
-      action={(
-        <>
-          <IconButton style={{ backgroundColor: 'transparent', color: '#919191' }}>
-            <Message />
-          </IconButton>
-          <IconButton style={{ backgroundColor: 'transparent', color: '#919191' }}>
-            <MoreVertIcon />
-          </IconButton>
-        </>
-              )}
+      action={(<LeftHeaderIcons />)}
     />
   )
 }

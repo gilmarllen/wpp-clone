@@ -46,7 +46,7 @@ export default function CustomizedInputBase({ sendMessage }) {
   }
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root} square>
       <InputBase
         startAdornment={(<SearchIconAdornment />)}
         inputRef={inputRef}
