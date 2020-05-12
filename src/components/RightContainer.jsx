@@ -8,12 +8,14 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import SearchIcon from '@material-ui/icons/Search'
 import AttachFileIcon from '@material-ui/icons/AttachFile'
 
+import backgroundChat from './bg-chat.png'
 import InputMessage from './InputMessage'
 
 const RightContainer = ({ classes, chat, sendMessage }) => (
-  <Grid item className={classes.rightGrid} style={{ width: '70%' }}>
+  <Grid item id="rightGrid" className={classes.rightGrid} style={{ width: '70%' }}>
     <Card className={classes.rightCard}>
       <CardHeader
+        style={{ zIndex: '2' }}
         className={classes.cardHeader}
         classes={{ action: classes['cardHeader-action'] }}
         avatar={
@@ -39,7 +41,11 @@ const RightContainer = ({ classes, chat, sendMessage }) => (
               )}
         title={chat.name}
       />
-      <CardContent className={classes.chatArea}>
+      <div style={{
+        backgroundImage: `url(${backgroundChat})`, opacity: '0.06', position: 'absolute', width: '100%', height: '100%'
+      }}
+      />
+      <CardContent className={classes.chatArea} style={{ background: '#e5ddd5' }}>
         <List>
           {chat.messages.map((message) => (
             <ListItem
@@ -48,7 +54,7 @@ const RightContainer = ({ classes, chat, sendMessage }) => (
             >
               <Paper
                 className={classes.message}
-                elevation={0}
+                elevation={1}
               >
                 <Typography className={classes.information} variant="body2">
                   {message.m}
@@ -58,7 +64,7 @@ const RightContainer = ({ classes, chat, sendMessage }) => (
           ))}
         </List>
       </CardContent>
-      <CardActions>
+      <CardActions style={{ background: '#f0f0f0', zIndex: '2', padding: '10px' }}>
         <InputMessage sendMessage={sendMessage} />
       </CardActions>
     </Card>

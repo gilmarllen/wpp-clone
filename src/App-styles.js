@@ -54,35 +54,33 @@ export default () => ({
     height: '100%'
   },
   rightCard: {
+    position: 'relative',
     display: 'flex',
     height: '100%',
     flex: '1',
     'flex-direction': 'column'
   },
   chatArea: {
-    background:
-      'url(bg-chat.png)',
-    'overflow-y': 'auto',
+    'overflow-y': 'scroll',
     'flex-direction': 'column-reverse',
     display: 'flex',
     flex: '1',
-    height: '100%',
-    width: '100%'
-    // opacity: '0.06'
+    height: '100%'
   },
   paper: {
     background: '#9de1fe',
     padding: 20
   },
   message: {
-    background: 'white',
+    background: '#dcf8c6',
     padding: 10,
     'max-width': '50%',
     width: 'fit-content'
   },
   'message-wrapper': {
     'padding-top': '2px',
-    'padding-bottom': '2px'
+    'padding-bottom': '2px',
+    justifyContent: 'flex-end'
   },
   inputMessage: {
     height: '25px'
