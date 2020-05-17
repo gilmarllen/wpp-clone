@@ -7,7 +7,7 @@ import InputBase from '@material-ui/core/InputBase'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 import MicIcon from '@material-ui/icons/Mic'
 
-import IconButton from '../custom-components/IconButton'
+import IconButton from 'custom-components/IconButton'
 
 const useStyles = makeStyles((theme) => ({
   root: {

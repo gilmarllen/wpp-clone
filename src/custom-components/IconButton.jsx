@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { IconButton } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles({
+const styles = () => ({
   root: {
     '&:hover': {
       backgroundColor: 'transparent'
@@ -12,9 +12,6 @@ const useStyles = makeStyles({
   }
 })
 
-// TODO merge classes (from props + default)
-export default (props) => {
-  const classes = useStyles()
+const IconButtonCustom = (props) => <IconButton {...props} />
 
-  return <IconButton {...props} classes={classes} />
-}
+export default withStyles(styles)(IconButtonCustom)

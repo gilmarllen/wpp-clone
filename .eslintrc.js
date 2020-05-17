@@ -28,4 +28,11 @@ module.exports = {
     "no-console": "off",
     "semi": ["error", "never"]
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    },
+  }
 };

@@ -12,7 +12,7 @@ import { Card, Grid } from '@material-ui/core'
 
 import appStyles from './App-styles'
 import LeftContainer from './components/LeftContainer/LeftContainer'
-import RightContainer from './components/RightContainer'
+import RightContainer from './components/RightContainer/RightContainer'
 
 const generateInitialList = (qtd) => [...Array(qtd).keys()].map((idx) => ({
   id: idx,

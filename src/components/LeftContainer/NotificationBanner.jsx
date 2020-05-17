@@ -7,7 +7,7 @@ import {
 
 import NotificationsOffIcon from '@material-ui/icons/NotificationsOff'
 
-import IconButton from '../../custom-components/IconButton'
+import IconButton from 'custom-components/IconButton'
 
 const useStyles = makeStyles({
   paper: {

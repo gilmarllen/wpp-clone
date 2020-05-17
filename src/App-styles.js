@@ -8,13 +8,6 @@ export default () => ({
       padding: '20px 0'
     }
   },
-  cardHeader: {
-    background: '#ededed',
-    padding: '6px 16px'
-  },
-  'cardHeader-action': {
-    marginTop: '0'
-  },
   card: {
     borderRadius: 'unset',
     display: 'flex',
@@ -84,13 +77,5 @@ export default () => ({
   },
   inputMessage: {
     height: '25px'
-  },
-  information: {
-    color: '#444'
-  },
-  leftGrid: {
-    height: '100%',
-    display: 'flex',
-    'flex-direction': 'column'
   }
 })
