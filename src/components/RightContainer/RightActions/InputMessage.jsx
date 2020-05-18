@@ -10,18 +10,23 @@ import MicIcon from '@material-ui/icons/Mic'
 import IconButton from 'custom-components/IconButton'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  paper: {
     padding: '0px 4px',
     display: 'flex',
     alignItems: 'center',
-    width: '100%'
+    width: '100%',
+    height: '100%',
+    borderRadius: '21px'
   },
-  input: {
+  inputBase: {
     marginLeft: theme.spacing(1),
     flex: 1
   },
   iconButton: {
-    padding: 10
+    padding: 7
+  },
+  icon: {
+    fontSize: '1.75rem'
   }
 }))
 
@@ -44,13 +49,13 @@ export default function CustomizedInputBase({ sendMessage }) {
 
   return (
     <>
-      <IconButton style={{ padding: '7px' }}>
-        <InsertEmoticonIcon style={{ fontSize: '1.75rem' }} />
+      <IconButton className={classes.iconButton}>
+        <InsertEmoticonIcon className={classes.icon} />
       </IconButton>
-      <Paper className={classes.root} square elevation={0} style={{ height: '100%', borderRadius: '21px' }}>
+      <Paper className={classes.paper} square elevation={0}>
         <InputBase
           inputRef={inputRef}
-          className={classes.input}
+          className={classes.inputBase}
           placeholder="Type a message"
           inputProps={{ 'aria-label': 'Type a message' }}
           onChange={(e) => setContent(e.target.value)}
@@ -58,8 +63,8 @@ export default function CustomizedInputBase({ sendMessage }) {
           onKeyDown={keyPressHandler}
         />
       </Paper>
-      <IconButton style={{ padding: '7px' }}>
-        <MicIcon style={{ fontSize: '1.75rem' }} />
+      <IconButton className={classes.iconButton}>
+        <MicIcon className={classes.icon} />
       </IconButton>
     </>
   )

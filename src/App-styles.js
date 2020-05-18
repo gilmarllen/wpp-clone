@@ -32,9 +32,6 @@ export default () => ({
     // "max-height": "730px",
     // "overflow-y": "scroll",
   },
-  'content-fix': {
-    flex: '1 1 auto'
-  },
   background: {
     position: 'absolute',
     height: 200,
@@ -42,40 +39,5 @@ export default () => ({
     top: 0,
     background: '#009788',
     'z-index': -1
-  },
-  rightGrid: {
-    height: '100%'
-  },
-  rightCard: {
-    position: 'relative',
-    display: 'flex',
-    height: '100%',
-    flex: '1',
-    'flex-direction': 'column'
-  },
-  chatArea: {
-    'overflow-y': 'scroll',
-    'flex-direction': 'column-reverse',
-    display: 'flex',
-    flex: '1',
-    height: '100%'
-  },
-  paper: {
-    background: '#9de1fe',
-    padding: 20
-  },
-  message: {
-    background: '#dcf8c6',
-    padding: 10,
-    'max-width': '50%',
-    width: 'fit-content'
-  },
-  'message-wrapper': {
-    'padding-top': '2px',
-    'padding-bottom': '2px',
-    justifyContent: 'flex-end'
-  },
-  inputMessage: {
-    height: '25px'
   }
 })

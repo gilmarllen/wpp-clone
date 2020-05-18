@@ -22,7 +22,7 @@ const generateInitialList = (qtd) => [...Array(qtd).keys()].map((idx) => ({
 }))
 
 const chatsIni = {
-  list: generateInitialList(70),
+  list: generateInitialList(20),
   current: 0
 }
 
