@@ -24,12 +24,8 @@ npm -v
 Windows & OS X & Linux:
 
 ```sh
-git clone https://github.com/gilmarllen/wpp-clone.git
-```
-```sh
+git clone https://github.com/gilmarllen/wpp-clone.gitsh
 cd wpp-clone
-```
-```sh
 npm i
 ```
 ```sh
