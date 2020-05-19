@@ -26,7 +26,7 @@ const RightContent = ({ chat }) => {
           <Message
             key={message.id}
             my
-            content={message.m}
+            message={message}
           />
         ))}
       </List>

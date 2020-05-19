@@ -10,15 +10,19 @@ import {
 import { withStyles } from '@material-ui/core/styles'
 import { Card, Grid } from '@material-ui/core'
 
+import { formatTime } from './util/util'
 import appStyles from './App-styles'
 import LeftContainer from './components/LeftContainer/LeftContainer'
 import RightContainer from './components/RightContainer/RightContainer'
+
+
+const current = new Date()
 
 const generateInitialList = (qtd) => [...Array(qtd).keys()].map((idx) => ({
   id: idx,
   name: Faker.name.firstName(),
   image: Faker.image.avatar(),
-  messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m }))
+  messages: Faker.lorem.sentences().split('.').slice(0, -1).map((m, id) => ({ id, m, time: formatTime(current) }))
 }))
 
 const chatsIni = {
@@ -37,7 +41,7 @@ function App({ classes }) {
       ...chats,
       list: chats.list.map((it) => (it.id === chats.current ? {
         ...it,
-        messages: it.messages.concat({ m, id: it.messages.length })
+        messages: it.messages.concat({ m, id: it.messages.length, time: formatTime(new Date()) })
       } : it))
     })
   }
