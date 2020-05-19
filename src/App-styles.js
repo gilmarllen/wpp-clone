@@ -1,5 +1,3 @@
-// TODO identify reused classes
-
 export default () => ({
   root: {
     height: '100vh',
@@ -29,8 +27,6 @@ export default () => ({
     display: 'flex',
     'flex-direction': 'column',
     'justify-content': 'flex-end'
-    // "max-height": "730px",
-    // "overflow-y": "scroll",
   },
   background: {
     position: 'absolute',
@@ -39,5 +35,11 @@ export default () => ({
     top: 0,
     background: '#009788',
     'z-index': -1
+  },
+  mobileView: {
+    position: 'absolute',
+    top: '50vh',
+    textAlign: 'center',
+    width: '100%'
   }
 })

@@ -48,28 +48,33 @@ function App({ classes }) {
 
   return (
     <>
-      <BrowserView>
-        <div className={classes.background} />
-        <Grid container className={classes.root} justify="center" alignItems="center">
-          <Card className={classes.card}>
-            <Grid container>
-              <LeftContainer classes={classes} {...leftProps} />
-              <RightContainer classes={classes} {...rightProps} />
-            </Grid>
-          </Card>
-        </Grid>
-      </BrowserView>
-      <MobileView style={{
-        position: 'absolute', top: '50vh', textAlign: 'center', width: '100%'
-      }}
-      >
-        This content is unavailable on mobile. Please check on a Desktop Web Browser
-        {' '}
-        <span role="img" aria-label="computer">🖥️</span>
-      </MobileView>
+      <AppBrowser leftProps={leftProps} rightProps={rightProps} classes={classes} />
+      <AppMobile classes={classes} />
     </>
   )
 }
+
+const AppBrowser = ({ classes, leftProps, rightProps }) => (
+  <BrowserView>
+    <div className={classes.background} />
+    <Grid container className={classes.root} justify="center" alignItems="center">
+      <Card className={classes.card}>
+        <Grid container>
+          <LeftContainer {...leftProps} />
+          <RightContainer {...rightProps} />
+        </Grid>
+      </Card>
+    </Grid>
+  </BrowserView>
+)
+
+const AppMobile = ({ classes }) => (
+  <MobileView className={classes.mobileView}>
+    This content is unavailable on mobile. Please check on a Desktop Web Browser
+    {' '}
+    <span role="img" aria-label="computer">🖥️</span>
+  </MobileView>
+)
 
 // App.propTypes = {
 //   classes: PropTypes.shape({
