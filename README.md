@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WhatsApp Clone
+> A clone version of the WhatsApp Web client frontend built with ReactJS.
 
-## Available Scripts
+This project was inspired by https://blog.rocketseat.com.br/react-material-ui/.
 
-In the project directory, you can run:
+The live mode of the project can be found at https://gilmarllen.github.io/wpp-clone/.
 
-### `npm start`
+![wpp-clone](https://user-images.githubusercontent.com/18606900/82277420-2d0ca380-995e-11ea-9f85-7a67464c0cac.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
+```sh
+node -v
+v13.12.0
+```
+```sh
+npm -v
+6.14.4
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development setup
+Windows & OS X & Linux:
 
-### `npm run build`
+```sh
+git clone https://github.com/gilmarllen/wpp-clone.git
+```
+```sh
+cd wpp-clone
+```
+```sh
+npm i
+```
+```sh
+npm start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Testing
+### Code style tests
+The project uses [ESLint](https://www.npmjs.com/package/eslint) to check the code style based on the airbnb JS code pattern:
+```sh
+npm run eslint
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Build and Deploy
+Default build proccess by [create-react-app](https://www.npmjs.com/package/create-react-app):
+```sh
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
+* [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
+* [Material-ui](https://material-ui.com/)
+* [Faker.js](https://www.npmjs.com/package/faker)
 
-### `npm run eject`
+## Meta
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Gilmarllen P. Miotto – gilmarllen@gmail.com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Distributed under the XYZ license. See ``LICENSE`` for more information. -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Fork it (<https://github.com/gilmarllen/wpp-clone/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
