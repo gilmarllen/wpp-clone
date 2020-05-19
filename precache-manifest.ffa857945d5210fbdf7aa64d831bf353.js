@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aee1abb34e51c2f2015cff9f0dc385a3",
+    "revision": "01cbece52543688737ea048b25b10a8c",
     "url": "/wpp-clone/index.html"
   },
   {
-    "revision": "e136720f95fbfca1b6fc",
-    "url": "/wpp-clone/static/css/main.13073247.chunk.css"
+    "revision": "f8e48d02995b0947f641",
+    "url": "/wpp-clone/static/css/main.6c5c1da3.chunk.css"
   },
   {
-    "revision": "d7907ddc852feec49a60",
-    "url": "/wpp-clone/static/js/2.39da0d83.chunk.js"
+    "revision": "5be8f29eabc8131ec6fa",
+    "url": "/wpp-clone/static/js/2.a98c434a.chunk.js"
   },
   {
     "revision": "8dea9a823bfb24207fef47cb32cf30ad",
-    "url": "/wpp-clone/static/js/2.39da0d83.chunk.js.LICENSE.txt"
+    "url": "/wpp-clone/static/js/2.a98c434a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e136720f95fbfca1b6fc",
-    "url": "/wpp-clone/static/js/main.6f54ec1b.chunk.js"
+    "revision": "f8e48d02995b0947f641",
+    "url": "/wpp-clone/static/js/main.53f1930a.chunk.js"
   },
   {
     "revision": "b4725f2eb53cd6f05758",
